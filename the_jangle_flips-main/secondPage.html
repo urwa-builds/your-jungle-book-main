@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levels</title>
+    <link rel="stylesheet" href="secondPage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <h1>Select Level</h1>
+    <div class="wrapper">
+        <div class="card" id="c1">
+
+            <div class="info">
+                <h2>Easy Level</h2>
+                <p>This is the easy level section.</p>
+                <a href="easy.html" class="btn">Play Now</a>
+
+            </div>
+        </div>
+        <div class="card" id="c2">
+
+            <div class="info">
+                <h2 id="l2">Medium Level</h2>
+                <p>This is the medium level section.</p>
+                <a href="mid.html" class="btn">Play Now</a>
+
+            </div>
+        </div>
+        <div class="card" id="c3">
+
+            <div class="info">
+                <h2>Hard Level</h2>
+                <p>This is the hard level section.</p>
+                <a href="hard.html" class="btn">Play Now</a>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="para">
+        <p> <span style="color: aqua; font-size: 1.7rem; font-weight: bold;">Instructions:</span><br> Flip is a timed
+            card memory game. Click the window cards to see what animal pictures they uncover and try to
+            find the matching pictures (Easy Level: 1 minutes, Medium Level: 1:15 minutes & Hard Level: 2 minutes)
+            underneath the cards.
+
+            Uncover two matching pictures at once to fix them from the game.
+
+            Eliminate all cards as fast as you can to win the Jungle Flip.
+
+            Have fun Jungle Flip!</p>
+    </div>
+    <div class="track">
+        <button id="back-button"><i class="fas fa-arrow-left"></i> Back</button>
+    </div>
+    <iframe src="music.html" style="display:none;" id="music-frame"></iframe>
+
+    <!-- <audio id="background-music" src="jungleSound.mp3" loop></audio> -->
+    <script>
+
+        // show and hide instruction
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card');
+            const instructions = document.getElementById('para');
+
+            cards.forEach(card => {
+                card.addEventListener('mouseover', () => {
+                    instructions.style.display = 'block';
+                });
+
+                card.addEventListener('mouseout', () => {
+                    instructions.style.display = 'none';
+                });
+            });
+        });
+
+        //  first try add sound effect
+        // document.addEventListener('DOMContentLoaded', () => {
+        //     const backgroundMusic = document.getElementById('background-music');
+
+        //     if (localStorage.getItem('isPlaying') === 'true') {
+        //         backgroundMusic.play().catch(() => {
+        //             // Ignore errors
+        //         });
+        //     }
+
+        // Add your game logic here
+
+        // Navigate to third page
+        // Example:
+        // document.getElementById('next-button').addEventListener('click', () => {
+        //     window.location.href = "thirdPage.html";
+        // });
+        // });
+
+        // back button 
+        document.getElementById('back-button').addEventListener('click', () => {
+            window.location.href = "index.html";
+        });
+
+
+    </script>
+    </script>
+</body>
+
+</html>

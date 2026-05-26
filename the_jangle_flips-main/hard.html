@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hard Level</title>
+    <link rel="stylesheet" href="hard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <div id="time-remaining">Time Remaining: 2:00</div>
+    <div class="result">
+        <p>Moves: <span id="move-counter">0</span></p>
+        <p>Scores: <span id="score-counter">0</span></p>
+    </div>
+    <div id="game-board"></div>
+    <div id="controls">
+        <div class="restart">
+            <button id="restart-button"><i class="fas fa-redo"></i> Restart</button>
+        </div>
+        <div class="track">
+            <button id="home-button"><i class="fas fa-home"></i> Home</button>
+            <button id="back-button"><i class="fas fa-arrow-left"></i> Back</button>
+        </div>
+    </div>
+
+    <!-- Popup Overlay and Box -->
+    <div id="popupOverlay" class="popup-overlay">
+        <div id="popupBox" class="popup">
+            <span id="closePopup" onclick="closePopup()">X</span>
+            <div id="popupMessage"></div>
+            <div id="fireworksContainer"></div>
+        </div>
+    </div>
+    <!-- <audio id="background-music" src="jungleSound.mp3" loop></audio> -->
+    <!-- <iframe src="music.html" style="display:none;" id="music-frame"></iframe> -->
+    <script src="hard.js"></script>
+</body>
+
+</html>

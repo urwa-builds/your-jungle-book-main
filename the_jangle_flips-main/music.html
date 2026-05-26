@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Music</title>
+</head>
+<body>
+    <audio id="background-music" src="jungleSound.mp3" loop autoplay></audio>
+    <script>
+        const backgroundMusic = document.getElementById('background-music');
+
+        window.addEventListener('load', () => {
+            if (localStorage.getItem('isPlaying') === 'true') {
+                backgroundMusic.play();
+            }
+        });
+
+        backgroundMusic.addEventListener('play', () => {
+            localStorage.setItem('isPlaying', 'true');
+        });
+
+        backgroundMusic.addEventListener('pause', () => {
+            localStorage.setItem('isPlaying', 'false');
+        });
+    </script>
+</body>
+</html>
